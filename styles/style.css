@@ -36,11 +36,7 @@
   font-family: var(--font-accent, sans-serif);
   line-height: normal;
   text-transform: uppercase;
-}
-
-.header__title {
-  margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  margin-block-end: 20px;
+  padding-block: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
 }
 
 .header__subtitle {
@@ -52,6 +48,7 @@
 }
 
 img {
+  display: block;
   max-width: 696px;
 }
 
