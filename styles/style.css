@@ -4,17 +4,15 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
 */
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-regular, sans-serif);
-  font-variation-settings: "wght" var(--font-normal-size);
+  font-family: var(--font-regular), "Arial", sans-serif;
+  font-variation-settings: "wght" var(--font-normal-weight);
   background-color: var(--page-background-color, #ffffff);
   background-image: var(--page-background-image, none);
   background-size: cover;
@@ -33,10 +31,10 @@
   display: grid;
   justify-items: center;
   justify-content: center;
-  font-family: var(--font-accent, sans-serif);
+  font-family: var(--font-accent), "Arial", sans-serif;
   line-height: normal;
   text-transform: uppercase;
-  padding-block: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+  padding-block: clamp(7.5rem, 7.234rem + 1.135vi, 8rem);
   margin-top: 100px;
   
 }
@@ -55,7 +53,7 @@
 
 img {
   display: block;
-  max-width: 696px;
+  max-inline-size: 100%;
 }
 
 .filter-brightness {
@@ -90,7 +88,8 @@ img {
   border: 2px solid var(--text-color, #000000);
   padding: 25px 30px;
   color: var(--text-color, #000000);
-  font-family: var(--font-accent, sans-serif);
+  font-family: var(--font-accent), "Arial", sans-serif;
+  font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
   background: var(--page-background-color, #ffffff);
@@ -105,7 +104,7 @@ img {
 
 .modal::backdrop {
   opacity: 0.75;
-  background: var(--color-black, #000000);
+  background: var(--text-color, #000000);
 }
 
 .modal__content {
@@ -137,10 +136,11 @@ img {
 }
 
 .card {
+  inline-size: 100%;
   margin-inline: auto;
   border: 2px solid var(--text-color, #000000);
   background: var(--page-background-color, #ffffff);
-  max-inline-size: 696px;
+  max-inline-size: 700px;
 }
 
 .card__header {
@@ -164,7 +164,7 @@ img {
   z-index: 1;
   opacity: 0.5;
   color: var(--text-color, #000000);
-  font-family: var(--font-accent, sans-serif);
+  font-family: var(--font-accent), "Arial", sans-serif;
   font-size: 14px;
   line-height: normal;
   text-transform: uppercase;
@@ -214,13 +214,20 @@ img {
   z-index: 1;
   border: 2px solid var(--text-color, #000000);
   padding: 10px 36px;
-  font-family: var(--font-accent, sans-serif);
+  font-family: var(--font-accent), "Arial", sans-serif;
   font-size: 14px;
   text-transform: inherit;
   background: var(--page-background-color, #ffffff);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+  padding: 0;
+  justify-content: center;
 }
 
 .button:focus {
