@@ -56,6 +56,27 @@ img {
   max-inline-size: 100%;
 }
 
+.watermark {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--font-accent), "Arial", sans-serif;
+  font-size: 14px;
+  opacity: 50%;
+  mix-blend-mode: hard-light;  
+}
+
+@supports (
+  (-webkit-text-stroke: 1px var(--text-color)) or
+    (text-stroke: 1px var(--text-color))
+) {
+  .watermark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-color);
+    text-stroke: 1px var(--text-color);
+  }
+}
+
 .filter-brightness {
   filter: brightness(150%);
 }
@@ -296,13 +317,3 @@ img {
   }
 }
 
-@supports (
-  (-webkit-text-stroke: 1px var(--page-background-color, #ffffff)) or
-    (text-stroke: 1px var(--page-background-color, #ffffff))
-) {
-  .card__img-label {
-    text-shadow: none;
-    -webkit-text-stroke: 1px var(--page-background-color, #ffffff);
-    text-stroke: 1px var(--page-background-color, #ffffff);
-  }
-}
